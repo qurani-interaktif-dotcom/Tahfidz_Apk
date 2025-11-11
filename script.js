@@ -1,3 +1,3 @@
-function mulai() {
-  alert("Mode hafalan dimulai! Bacalah ayat pertama dengan tartil.");
-}
+document.getElementById("mulai").addEventListener("click", () => {
+  window.location.href = "hafalan.html";
+});
