@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hafalan Qur'an</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Penilaian Hafalan</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Pilih Surah yang ingin dihafal</h2>
-  <ul>
-    <li><button>Al-Fatihah</button></li>
-    <li><button>Al-Baqarah</button></li>
-    <li><button>An-Nas</button></li>
-  </ul>
-  <a href="index.html">⬅ Kembali</a>
+  <h1>Penilaian Hafalan Qur'an</h1>
+  <label>Tajwid (0–100):</label>
+  <input type="number" id="tajwid" min="0" max="100"><br><br>
+  <label>Kelancaran (0–100):</label>
+  <input type="number" id="kelancaran" min="0" max="100"><br><br>
+  <label>Hafalan (0–100):</label>
+  <input type="number" id="hafalan" min="0" max="100"><br><br>
+  <button id="hitung">Hitung Nilai</button>
+  <div id="hasil" style="margin-top:20px; font-weight:bold;"></div>
+  <br>
+  <a href="index.html">⬅ Kembali ke Menu Utama</a>
+  <script src="script.js"></script>
 </body>
 </html>
