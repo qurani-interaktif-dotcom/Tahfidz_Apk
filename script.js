@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hitungBtn = document.getElementById("hitung");
+if (hitungBtn) {
+  hitungBtn.addEventListener("click", () => {
+    // ambil nilai dan kalkulasi
+  });
+}
   const hasilDiv = document.getElementById("hasil");
 
   if (hitungBtn) {
