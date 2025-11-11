@@ -17,14 +17,33 @@
       <p>Selamat datang di aplikasi Qur'an Interaktif. Tekan tombol di bawah untuk memulai hafalan dan penilaian.</p>
       <button id="mulai">Mulai Hafalan</button>
     </section>
+
+    <!-- Halaman penilaian -->
+    <section id="penilaian" class="hidden">
+      <h2>Penilaian Hafalan</h2>
+      <p>Masukkan hasil penilaian Anda di bawah ini:</p>
+      <form id="formPenilaian">
+        <label for="nama">Nama Santri:</label>
+        <input type="text" id="nama" required />
+
+        <label for="surah">Surah:</label>
+        <input type="text" id="surah" required />
+
+        <label for="nilai">Nilai (0–100):</label>
+        <input type="number" id="nilai" min="0" max="100" required />
+
+        <button type="submit">Simpan Penilaian</button>
+      </form>
+
+      <div id="hasil"></div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Qurani Interaktif | Dirancang oleh Riski</p>
+    <p>&copy; 2025 Qurani Interaktif | Dirancang oleh Riski Ermanda,S.Pd</p>
   </footer>
 
-  <!-- Pastikan file script.js ada di direktori yang sama -->
+  <!-- PENTING: Hanya satu tombol "mulai" -->
   <script src="script.js"></script>
-  <button id="mulai">Mulai Hafalan</button>
 </body>
 </html>
