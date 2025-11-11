@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Penilaian Hafalan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Penilaian Hafalan Qur'an</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Penilaian Hafalan Qur'an</h1>
-  <label>Tajwid (0–100):</label>
-  <input type="number" id="tajwid" min="0" max="100"><br><br>
-  <label>Kelancaran (0–100):</label>
-  <input type="number" id="kelancaran" min="0" max="100"><br><br>
-  <label>Hafalan (0–100):</label>
-  <input type="number" id="hafalan" min="0" max="100"><br><br>
-  <button id="hitung">Hitung Nilai</button>
-  <div id="hasil" style="margin-top:20px; font-weight:bold;"></div>
-  <br>
-  <a href="index.html">⬅ Kembali ke Menu Utama</a>
+  <header>
+    <h1>Penilaian Hafalan Qur'an</h1>
+    <p>Isi nilai sesuai hasil hafalan santri.</p>
+  </header>
+
+  <main>
+    <form id="formNilai">
+      <label for="tajwid">Tajwid (0–100):</label>
+      <input type="number" id="tajwid" min="0" max="100" required><br><br>
+
+      <label for="kelancaran">Kelancaran (0–100):</label>
+      <input type="number" id="kelancaran" min="0" max="100" required><br><br>
+
+      <label for="hafalan">Hafalan (0–100):</label>
+      <input type="number" id="hafalan" min="0" max="100" required><br><br>
+
+      <button type="button" id="hitung">Hitung Nilai Akhir</button>
+    </form>
+
+    <div id="hasil" style="margin-top: 20px; font-weight: bold;"></div>
+    <br>
+    <a href="index.html">⬅ Kembali ke Menu Utama</a>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Qurani Interaktif</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
