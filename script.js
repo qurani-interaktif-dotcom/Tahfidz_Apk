@@ -1,19 +1,26 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const mulai = document.getElementById("mulai");
-  if (mulai) {
-    mulai.addEventListener("click", function() {
-      window.location.href = "hafalan.html";
-    });
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const hitungBtn = document.getElementById("hitung");
+  const hasilDiv = document.getElementById("hasil");
 
-  const hitung = document.getElementById("hitung");
-  if (hitung) {
-    hitung.addEventListener("click", function() {
-      const tajwid = Number(document.getElementById("tajwid").value);
-      const kelancaran = Number(document.getElementById("kelancaran").value);
-      const hafalan = Number(document.getElementById("hafalan").value);
-      const total = ((tajwid + kelancaran + hafalan) / 3).toFixed(2);
-      document.getElementById("hasil").innerHTML = `Nilai Akhir: ${total}`;
+  if (hitungBtn) {
+    hitungBtn.addEventListener("click", () => {
+      const tajwid = parseFloat(document.getElementById("tajwid").value) || 0;
+      const kelancaran = parseFloat(document.getElementById("kelancaran").value) || 0;
+      const hafalan = parseFloat(document.getElementById("hafalan").value) || 0;
+
+      const rata2 = ((tajwid + kelancaran + hafalan) / 3).toFixed(2);
+
+      let kategori = "";
+      if (rata2 >= 90) kategori = "Sangat Baik";
+      else if (rata2 >= 75) kategori = "Baik";
+      else if (rata2 >= 60) kategori = "Cukup";
+      else kategori = "Perlu Bimbingan";
+
+      hasilDiv.innerHTML = `
+        <h3>Hasil Penilaian</h3>
+        <p><strong>Rata-rata:</strong> ${rata2}</p>
+        <p><strong>Kategori:</strong> ${kategori}</p>
+      `;
     });
   }
 });
