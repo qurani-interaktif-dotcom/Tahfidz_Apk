@@ -4,15 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Penilaian Hafalan Qur'an</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Penilaian Hafalan</h1>
-  <label>Tajwid (0–100):</label><input type="number" id="tajwid"><br>
-  <label>Kelancaran (0–100):</label><input type="number" id="kelancaran"><br>
-  <label>Hafalan (0–100):</label><input type="number" id="hafalan"><br>
+  <h1>Penilaian Hafalan Qur'an</h1>
+
+  <label for="tajwid">Tajwid (0–100):</label>
+  <input type="number" id="tajwid" min="0" max="100"><br>
+
+  <label for="kelancaran">Kelancaran (0–100):</label>
+  <input type="number" id="kelancaran" min="0" max="100"><br>
+
+  <label for="hafalan">Hafalan (0–100):</label>
+  <input type="number" id="hafalan" min="0" max="100"><br>
+
   <button id="hitung">Hitung Nilai</button>
+
   <div id="hasil"></div>
-  <a href="index.html">⬅ Kembali</a>
+
+  <p><a href="index.html">⬅ Kembali ke Halaman Utama</a></p>
+
   <script src="script.js"></script>
 </body>
 </html>
