@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <link rel="manifest" href="manifest.json">
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js');
-  }
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Qur'an Interaktif</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qur'an Interaktif - Tahfidz App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Qur'an Interaktif</h1>
-  <p>Selamat datang di aplikasi hafalan & penilaian Qur'an</p>
-<button id="mulai">Mulai Hafalan</button>
+  <header>
+    <h1>Qur'an Interaktif</h1>
+    <p>Media Pembelajaran Tahfidz Berbasis Penilaian</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>Selamat datang di aplikasi Qur'an Interaktif. Tekan tombol di bawah untuk memulai hafalan dan penilaian.</p>
+      <button id="mulai">Mulai Hafalan</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Qurani Interaktif | Dirancang oleh Riski</p>
+  </footer>
+
+  <!-- Pastikan file script.js ada di direktori yang sama -->
   <script src="script.js"></script>
 </body>
 </html>
