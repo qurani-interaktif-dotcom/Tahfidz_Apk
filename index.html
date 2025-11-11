@@ -15,8 +15,12 @@
   <main>
     <section class="intro">
       <p>Selamat datang di aplikasi Qur'an Interaktif. Tekan tombol di bawah untuk memulai hafalan dan penilaian.</p>
-      <button onclick="window.location.href='penilaian.html'">Mulai Hafalan</button>
-    </section>
+     <button id="mulai">Mulai Hafalan</button>
+<script>
+  document.getElementById("mulai").addEventListener("click", () => {
+    window.location.href = "penilaian.html";
+  });
+</script>
 
     <!-- Halaman penilaian -->
     <section id="penilaian" class="hidden">
